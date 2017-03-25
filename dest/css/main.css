@@ -303,18 +303,13 @@ h5 {
 }
 .payment-card-form .select-wrap select {
   -webkit-appearance: none;
-  /*Removes default chrome and safari style*/
   -moz-appearance: none;
-  /* Removes Default Firefox style*/
-  /*Width of select dropdown to give space for arrow image*/
   text-indent: 0.01px;
-  /* Removes default arrow from firefox*/
   text-overflow: "";
-  /*Removes default arrow from firefox*/
   background-image: none;
   color: #3b3e45;
 }
-.payment-card-form .select-wrap::-ms-expand {
+.payment-card-form .select-wrap select::-ms-expand {
   display: none;
 }
 .payment-card-form .select-wrap::after {

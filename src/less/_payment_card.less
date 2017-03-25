@@ -118,7 +118,7 @@
 
             &.card-num {
                 @media (max-width: 480px) {
-                  margin-bottom: 4px;
+                    margin-bottom: 4px;
                 }
             }
 
@@ -148,21 +148,18 @@
             position: relative;
 
             select {
+                // start clean default braouse props
                 -webkit-appearance: none;
-                /*Removes default chrome and safari style*/
                 -moz-appearance: none;
-                /* Removes Default Firefox style*/
-                /*Width of select dropdown to give space for arrow image*/
                 text-indent: 0.01px;
-                /* Removes default arrow from firefox*/
                 text-overflow: "";
-                /*Removes default arrow from firefox*/
                 background-image: none;
+                // end clean default braouse props
                 color: #3b3e45;
-            }
-
-            &::-ms-expand {
-                display: none;
+                //clean ie defaults select arr
+                &::-ms-expand {
+                    display: none;
+                }
             }
 
             &::after {

@@ -31,7 +31,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('build', function() {
-    return gulp.src('src/css/**/*.css')
+    return gulp.src('dest/css/**/*.css')
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false

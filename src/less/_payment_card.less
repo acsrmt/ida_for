@@ -1,0 +1,201 @@
+//START payment card/form styles
+@font-color__main: #383d43;
+@font-color__title: #8494ab;
+@font-color__placeholder: #bec6cf;
+
+.payment-card {
+    padding: 30px;
+    background-color: #f7f8f8;
+    color: @font-color__main;
+    font-family: Arial, sans-serif;
+    font-size: 1.33rem;
+    line-height: 1.75rem;
+
+    &__title {
+        display: inline-block;
+        width: 160px;
+        color: @font-color__title;
+
+        &.main {
+            min-width: 160px;
+            width: auto;
+            margin-bottom: 15px;
+        }
+
+        &.row {
+            display: block;
+            width: auto;
+            margin-bottom: 3px;
+        }
+    }
+
+    &__row {
+        display: block;
+        margin-bottom: 12px;
+        @media (max-width: 410px) {
+            float: none;
+        }
+
+        &.row-filled {
+            height: 40px;
+            margin: 5px -15px 15px;
+            background-color: #e5e8ed;
+        }
+    }
+
+    &__header {
+        font-size: 1.83rem;
+        line-height: 2.08rem;
+    }
+
+    &-form {
+        position: relative;
+
+        &__box {
+            width: 350px;
+            height: 234px;
+            padding: 20px 15px 4px;
+            background-color: #f7f8f8;
+            border: 1px solid #e5e8ed;
+            border-radius: 10px;
+            @media (max-width: 410px) {
+                width: 100%;
+                height: 100%;
+            }
+
+            &.first {
+                position: relative;
+                z-index: 1;
+            }
+
+            &.second {
+                position: absolute;
+                width: 368px;
+                top: 20px;
+                left: 194px;
+                @media (max-width: 620px) {
+                    width: 350px;
+                    margin-top: 20px;
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                }
+                @media (max-width: 410px) {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        &__input {
+            display: inline-block;
+            width: 65px;
+            height: 42px;
+            padding: 7px 5px 5px 12px;
+            margin-right: 9px;
+            background-color: #ffffff;
+            border: 1px solid #e4e9ee;
+            font-size: 1.33rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.select-month {
+                width: 70px;
+            }
+
+            &.select-year {
+                width: 86px;
+            }
+
+            &.owner {
+                width: 319px;
+                @media (max-width: 767px) {
+                    width: 100%;
+                }
+            }
+
+            &.card-num {
+                @media (max-width: 480px) {
+                  margin-bottom: 4px;
+                }
+            }
+
+            &.code {
+                width: 138px;
+            }
+
+            &::-webkit-input-placeholder {
+                color: @font-color__placeholder;
+            }
+
+            &:-moz-placeholder {
+                color: @font-color__placeholder;
+            }
+
+            &:-ms-input-placeholder {
+                color: @font-color__placeholder;
+            }
+
+            &::-moz-placeholder {
+                color: @font-color__placeholder;
+            }
+        }
+
+        .select-wrap {
+            display: inline-block;
+            position: relative;
+
+            select {
+                -webkit-appearance: none;
+                /*Removes default chrome and safari style*/
+                -moz-appearance: none;
+                /* Removes Default Firefox style*/
+                /*Width of select dropdown to give space for arrow image*/
+                text-indent: 0.01px;
+                /* Removes default arrow from firefox*/
+                text-overflow: "";
+                /*Removes default arrow from firefox*/
+                background-image: none;
+                color: #3b3e45;
+            }
+
+            &::-ms-expand {
+                display: none;
+            }
+
+            &::after {
+                font-size: 26px;
+                line-height: 1;
+                color: @font-color__placeholder;
+                font-family: "Ionicons";
+                content: "\f3d0";
+                position: absolute;
+                right: 8px;
+                top: 8px;
+                pointer-events: none;
+            }
+        }
+
+        .input-wrap {
+            position: relative;
+            display: inline-block;
+
+            &.has-feedback input {
+                padding-right: 30px;
+                margin-right: 0;
+            }
+
+            &-feedback {
+                font-size: 26px;
+                line-height: 1;
+                position: absolute;
+                color: @font-color__placeholder;
+                right: 8px;
+                top: 8px;
+            }
+        }
+    }
+}
+//END payment card/form styles

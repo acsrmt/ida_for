@@ -6,30 +6,44 @@
     </div>
     <div class="payment-card__data">
         <h4 class="payment-card__header">Данные банковской карты</h4>
-        <form class="payment-card-form" action="index.html" method="post">
+        <form class="payment-card-form" id="paymentForm" name="paymentForm" action="index.html" method="post">
             <div class="payment-card-form__box first">
                 <div class="payment-card__row">
                     <label class="payment-card__title row" for="card-num">Номер карты</label>
-                    <input class="payment-card-form__input card-num" id="card-num" type="text" name="" value="">
-                    <input class="payment-card-form__input card-num" type="text" name="" value="">
-                    <input class="payment-card-form__input card-num" type="text" name="" value="">
-                    <input class="payment-card-form__input card-num" type="text" name="" value="">
+                    <input class="payment-card-form__input card-num" id="card-num" type="text" name="CardNum1">
+                    <input class="payment-card-form__input card-num" type="text" name="CardNum2">
+                    <input class="payment-card-form__input card-num" type="text" name="CardNum3">
+                    <input class="payment-card-form__input card-num" type="text" name="CardNum4">
                 </div>
                 <div class="payment-card__row">
                     <label class="payment-card__title row" for="card-select">Срок действия</label>
                     <div class="select-wrap">
-                        <select class="payment-card-form__input select-month" name="" id="card-select">
-                            <option value="">04</option>
+                        <select class="payment-card-form__input select-month" name="ValidMonth" id="card-select">
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4" selected>04</option>
+                            <option value="5">05</option>
+                            <option value="6">06</option>
+                            <option value="7">07</option>
+                            <option value="8">08</option>
+                            <option value="9">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
                         </select>
                     </div>
                     <div class="select-wrap">
-                        <select class="payment-card-form__input select-year" name="">
-                            <option value="">2018</option>
+                        <select class="payment-card-form__input select-year" name="ValidYear">
+                            <option value="2017">2017</option>
+                            <option value="2018" selected>2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
                         </select>
                     </div>
                 </div>
                 <div class="payment-card__row">
-                    <input class="payment-card-form__input owner" type="text" name="" value="" placeholder="Держатель карты">
+                    <input class="payment-card-form__input owner" type="text" name="CardPlaceholder" placeholder="Держатель карты">
                 </div>
             </div>
             <div class="payment-card-form__box second">
@@ -37,13 +51,13 @@
                 <div class="payment-card__row right-block">
                     <label class="payment-card__title row" for="card-code">Код CVV2 / CVC2</label>
                     <div class="input-wrap has-feedback">
-                        <input class="payment-card-form__input code" id="card-code" type="text" name="" value="">
+                        <input class="payment-card-form__input code" id="card-code" type="text" name="CardCode">
                         <span class="ion-ios-help-outline input-wrap-feedback"></span>
                     </div>
                 </div>
             </div>
             <div class="btn-group">
-                <input class="btn btn-submit" type="submit" name="" value="Оплатить">
+                <input class="btn btn-submit" type="submit" name="Submit" value="Оплатить">
             </div>
         </form>
     </div>
